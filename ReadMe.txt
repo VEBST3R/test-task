@@ -11,7 +11,6 @@ Hi! Here is my implementation of the test task. I've set up the basic gameplay m
 - **Performance:** Set `Application.targetFrameRate = 160` for a smooth experience.
 
 ## Unique Feature Implementation
-For the unique feature, I chose to implement a **Color change when jumping**, as well as audio feedback.
 
 **How it works (Components used):**
 - **Color Change:** In the `PlayerController.cs` script, I keep a reference to the player's `SpriteRenderer`. Inside the `Jump()` method, the script sets `spriteRenderer.color` to a designated `jumpColor`. Inside the `CheckGrounded()` logic (which uses `Rigidbody2D.GetContacts()` to accurately detect floor collisions), it resets the color back to `originalColor` as soon as the player lands. *(Note: This feature is fully implemented in the code, but the colors are currently left at their default white values in the Inspector because the game uses a custom sprite asset that doesn't need tinting).*
